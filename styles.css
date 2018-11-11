@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One|EB+Garamond');
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 960px;
+  padding: 50px;
+}
+
+.header {
+  padding:0;
+  margin: 0;
+  background-color: "#FF635E";
+  color: black;
+  text-align: center;
+  font-family: "Faster One";
+  font-size: 60px;
+}
+
+span {
+  color: white;
+}
+
+span:hover {
+  color: black;
+}
+
+.content {
+  font-family: "EB Garamond";
+  margin: 0 auto;
+}
+
+.mainheading, .subheading {
+  font-family: "Impact";
+  text-align: center;
+}
+
+#celticpic {
+  float: left;
+  border: 1px green;
+}
+
+#lakerpic {
+  float: right;
+}
+
+.lakerbio {
+  margin-top: 300px;
+  padding: 60px;
+  float: left;
+
+}
+
+.celtics img, .lakers img {
+  width: 500px;
+  height: 400px;
+  padding: 50px;
+}
