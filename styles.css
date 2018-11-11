@@ -2,19 +2,24 @@
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   width: 960px;
   padding: 50px;
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  grid-template-rows: 3fr 10fr;
+
 }
 
-.header {
+.title {
   padding:0;
   margin: 0;
-  background-color: "#FF635E";
   color: black;
   text-align: center;
   font-family: "Faster One";
   font-size: 60px;
+  grid-row: 1;
+  grid-column: 1 / span 2;
 }
 
 span {
@@ -25,34 +30,36 @@ span:hover {
   color: black;
 }
 
-.content {
+p {
   font-family: "EB Garamond";
-  margin: 0 auto;
 }
 
-.mainheading, .subheading {
+.rivals.heading {
   font-family: "Impact";
   text-align: center;
+  grid-column: 1 / span 2;
+  grid-row: 2;
 }
 
-#celticpic {
+.celtics.pic, .lakers.bio {
+  grid-column: 1;
   float: left;
-  border: 1px green;
 }
 
-#lakerpic {
+.lakers.pic, .celtics.bio {
+  grid-column: 2;
   float: right;
 }
 
-.lakerbio {
-  margin-top: 300px;
-  padding: 60px;
-  float: left;
-
+.lakers.pic, .celtics.pic {
+  height: 300px;
+  width: 400px;
 }
 
-.celtics img, .lakers img {
-  width: 500px;
-  height: 400px;
-  padding: 50px;
+.lakers.header:hover {
+  color: purple;
+}
+
+.celtics.header:hover {
+  color: green;
 }
