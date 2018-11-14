@@ -2,6 +2,7 @@ let width = 960,
     height = 500,
     coordinates = {
       section1: 330,
+      midsec1: 330 / 2,
       section2: 530,
     },
     middle = (coordinates.section1 + coordinates.section2) / 2;
@@ -14,12 +15,11 @@ function setup() {
 function draw() {
   drawBackground();
   drawHoop();
-  drawBasketball();
   drawGame();
+  drawBasketball();
 }
 
 function drawBackground()  {
-  strokeWeight(4);
   rect(0,0,coordinates.section1,height-1);
   rect(coordinates.section1,0,230,height-1);
   rect(coordinates.section2,0,coordinates.section1,height-1);
@@ -28,11 +28,15 @@ function drawBackground()  {
 function drawHoop() {
   strokeWeight(1);
   //bar
-  rect(115,200,20,297);
+  rect(coordinates.midsec1 - 20,200,20,297);
   //backboard
-  rect(50,100,150,150);
+  rect(coordinates.midsec1 - 100, 100, 200, 150);
+  rect(coordinates.midsec1 - 50, 170, 100, 80);
   //rim
-  ellipse(125,200,80,10);
+  ellipse(coordinates.midsec1,200,90,20);
+  //net
+  line(coordinates.midsec1 - 45, 200, coordinates.midsec1, 250);
+  line(coordinates.midsec1 + 45, 200, coordinates.midsec1, 250);
 }
 
 function drawBasketball() {
@@ -40,6 +44,8 @@ function drawBasketball() {
   let moveX = width - 160,
       moveY = height - 60;
   ellipse(moveX, moveY, 100);
+  moveX = (moveX + 1) % coordinates.section3;
+  moveY = (moveY + 1) % coordinates.section3;
 }
 
 function drawGame() {
@@ -48,5 +54,5 @@ function drawGame() {
   //success bar
   rect(middle - 20, 200, 40, 100);
   //basketball icon
-  ellipse(middle, height - 250, 45);
+  ellipse(middle, height - 250, 50);
 }
