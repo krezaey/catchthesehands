@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Faster+One|EB+Garamond');
+
 
 body {
   padding: 0;
@@ -51,15 +51,61 @@ p {
   float: right;
 }
 
-.lakers.pic, .celtics.pic {
+.rivals.lakers.pic, .rivals.celtics.pic {
   height: 300px;
   width: 400px;
 }
 
-.lakers.header:hover {
+.rivals.lakers.header:hover {
   color: purple;
 }
 
-.celtics.header:hover {
+.rivals.celtics.header:hover {
   color: green;
+}
+.favplayers {
+  border-style: solid;
+  margin-top: 300px;
+  margin-left: 500px;
+  margin-top: -30px;
+  width: 500px;
+  height: 300px;
+  border-color: purple;
+  background-color: orange;
+  font-size: 30px;
+ }
+
+.celplayers {
+ margin-left: 1000px;
+ margin-top: -1020px;
+ border-style: solid;
+ width: 500px;
+ height: 300px;
+ border-color: white;
+ background-color: green;
+ font-size: 30px;
+
+}
+.favmoments{
+  color: white;
+  margin-top: 60px;
+  margin-left: 800px;
+
+}
+.favorites {
+  border-style: solid;
+  margin-top: 300px;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 700px;
+  background-image: url("http://media.liveauctiongroup.net/i/7982/9490760_1.jpg?v=8CCCA6572EFE7B0"), url("http://media.liveauctiongroup.net/i/5798/8674661_1.jpg?v=8CC51A3D5E76C70");
+  background-size: 700px 700px;
+
+}
+#favs {
+  text-align: center;
+  color: black;
+  font-family: impact;
+  font-size: 150px;
+
 }
