@@ -9,7 +9,7 @@ let width = 960,
   backgroundImage;
 
 function preload() {
-  let backgroundImage = loadImage("background.png");
+  backgroundImage = loadImage("background.png");
 
 }
 function setup() {
