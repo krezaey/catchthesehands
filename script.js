@@ -12,6 +12,7 @@ function preload() {
   backgroundImage = loadImage("background.png");
 
 }
+
 function setup() {
   let canvas = createCanvas(width, height);
   //image must be same length as the canvas
@@ -20,19 +21,13 @@ function setup() {
 
 function draw() {
   background(backgroundImage);
-  drawBackground();
   drawGame();
   drawBasketball();
-}
-
-function drawBackground() {
-  rect(0, 0, coordinates.section1, height - 1);
-  rect(coordinates.section1, 0, 230, height - 1);
-  rect(coordinates.section2, 0, coordinates.section1, height - 1);
+  drawProgress();
 }
 
 function drawBasketball() {
-  let moveX = width - 160,
+  let moveX = width - 140,
     moveY = height - 60;
   ellipse(moveX, moveY, 100);
   moveX = (moveX + 1) % coordinates.section3;
@@ -46,13 +41,27 @@ function drawGame() {
     lowerY = 300;
  // while (ypos > min && ypos < max) {
   document.addEventListener("keypress", function(event) {
-    if (event.key === "O") {
-      //movement up and down
+    if (event.key === "ArrowUp") {
+      //movement up
+    }
+    if (event.key === "ArrowDown") {
+      //movement down
     }
   });
     //success bar
-    rect(middle - 20, 200, 40, 100);
+    fill("green");
+    rect(middle + 13, 200, 72, 100);
     //basketball icon
-    ellipse(middle, height - 250, 50);
+    fill("orange");
+    ellipse(middle + 50, height - 250, 50);
 //  }
+}
+
+function drawProgress() {
+  fill("white");
+  //whole progress bar
+  rect(10, 10, width - 20, 30);
+  //bar that grows and shrinks width depending on user's Progress
+  fill("green");
+  rect(10, 10, 10, 30);
 }
