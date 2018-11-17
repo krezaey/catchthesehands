@@ -15,6 +15,7 @@ function preload() {
 
 function setup() {
   let canvas = createCanvas(width, height);
+  canvas.class("canvas");
   //image must be same length as the canvas
   backgroundImage.loadPixels();
 }

@@ -150,3 +150,7 @@ p {
   position: relative;
   color: white;
 }
+
+.canvas {
+  grid-row: 6 / span 1;
+}
