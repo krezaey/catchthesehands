@@ -6,10 +6,11 @@ let width = 960,
     section2: 530
   },
   middle = (coordinates.section1 + coordinates.section2) / 2,
-  backgroundImage;
+  backgroundImage, basketball;
 
 function preload() {
-  backgroundImage = loadImage("background.png");
+  backgroundImage = loadImage("background.png"),
+  basketball = loadImage("basketball.png");
 
 }
 
@@ -18,6 +19,7 @@ function setup() {
   canvas.class("canvas");
   //image must be same length as the canvas
   backgroundImage.loadPixels();
+  basketball.loadPixels();
 }
 
 function draw() {
