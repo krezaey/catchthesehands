@@ -1,8 +1,6 @@
 url('https://fonts.googleapis.com/css?family=Faster+One|EB+Garamond');
 
-
 body {
-  background-color: black;
   padding: 0;
   margin: 0 auto;
   width: 960px;
@@ -12,6 +10,17 @@ body {
   grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr;
 
 }
+.title2 {
+  position: relative;
+  color: white;
+  font-family: impact;
+  margin-top: 655px;
+  border: solid;
+  height: 100px;
+  background-color: black;
+  text-align: center;
+  font-size: 30px;
+}
 
 .title {
   padding:0;
@@ -19,7 +28,7 @@ body {
   position: relative;
   color: white;
   text-align: center;
-  font-family: "Faster One";
+  font-family: "Impact";
   font-size: 60px;
   grid-row: 1;
   grid-column: 1 / span 2;
@@ -48,7 +57,8 @@ p {
   grid-row: 2;
   position: relative;
   padding: 0px;
-  color: white;
+  color: black;
+  margin-top: 30px;
 }
 
 .lakers {
@@ -56,6 +66,7 @@ p {
   position: relative;
   color: white;
   max-width: 100%;
+  color: black;
 }
 
 .lakers.pic, .celtics.bio {
@@ -66,6 +77,8 @@ p {
   color: white;
   max-width: 100%;
   min-width: auto;
+  margin-top: 380px;
+  color: black;
 }
 
 .rivals.lakers.pic, .rivals.celtics.pic {
@@ -75,6 +88,7 @@ p {
 }
 .celtics.pic {
   position: relative;
+  margin-top: 650px;
 }
 
 .rivals.lakers.header:hover {
@@ -87,7 +101,7 @@ p {
 .favplayers {
   border-style: solid;
   margin-left: 50px;
-  margin-top: -75px;
+  margin-top: -65px;
   width: 500px;
   height: 300px;
   border-color: purple;
@@ -115,18 +129,20 @@ p {
   opacity: 1;
 }
 .favmoments{
-  color: black;
+  color: white;
   margin-top: 60px;
-  margin-left: 425px;
-  width: 300px;
+  margin-right: 50px;
   border: solid;
+  text-align: center;
+  background-color: grey;
+  border-color: black;
 
 
 }
 .favorites {
   position: absolute;
   border-style: solid;
-  margin-top: 300px;
+  margin-top: 100px;
   background-repeat: no-repeat;;
   width: auto;
   height: 700px;
@@ -146,11 +162,12 @@ p {
   max-width: 100%;
   max-height: 100%;
 }
-.celtics {
-  position: relative;
-  color: white;
+.lakers.pic {
+  margin-top: -50px;
 }
-
-.canvas {
-  grid-row: 6 / span 1;
+.celtics.bio {
+  margin-top: -0px;
+}
+.celtics.pic {
+  margin-top: -30px;
 }
