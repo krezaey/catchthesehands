@@ -1,70 +1,50 @@
-let width = 960,
-  height = 500,
-  coordinates = {
-    section1: 330,
-    midsec1: 330 / 2,
-    section2: 530
-  },
-  middle = (coordinates.section1 + coordinates.section2) / 2,
-  backgroundImage, basketball;
-
-function preload() {
-  backgroundImage = loadImage("background.png"),
-  basketball = loadImage("basketball.png");
-
-}
+let cwidth = 900,
+  cheight = 500,
+  width = cwidth - 10,
+  height = cheight - 10,
+  moving = {
+    pbarWidth: 440,
+    sbarY: 230,
+    basketballY: 260
+  };
 
 function setup() {
-  let canvas = createCanvas(width, height);
-  canvas.class("canvas");
-  //image must be same length as the canvas
-  backgroundImage.loadPixels();
-  basketball.loadPixels();
+  let canvas = createCanvas(cwidth, cheight);
 }
 
 function draw() {
-  background(backgroundImage);
-  drawGame();
-  drawBasketball();
+  drawBackground();
   drawProgress();
+  drawGameBar();
+  drawGameIcon();
 }
 
-function drawBasketball() {
-  let moveX = width - 140,
-    moveY = height - 60;
-  ellipse(moveX, moveY, 100);
-  moveX = (moveX + 1) % coordinates.section3;
-  moveY = (moveY + 1) % coordinates.section3;
-}
-
-function drawGame() {
-  let max = 400,
-    min = 50,
-    upperY = 200,
-    lowerY = 300;
- // while (ypos > min && ypos < max) {
-  document.addEventListener("keypress", function(event) {
-    if (event.key === "ArrowUp") {
-      //movement up
-    }
-    if (event.key === "ArrowDown") {
-      //movement down
-    }
-  });
-    //success bar
-    fill("green");
-    rect(middle + 13, 200, 72, 100);
-    //basketball icon
-    fill("orange");
-    ellipse(middle + 50, height - 250, 50);
-//  }
+function drawBackground() {
+  fill("linen");
+  rect(0, 0, width, height);
 }
 
 function drawProgress() {
+  //progress bar
   fill("white");
-  //whole progress bar
-  rect(10, 10, width - 20, 30);
-  //bar that grows and shrinks width depending on user's Progress
+  rect(0, 0, width, 50);
   fill("green");
-  rect(10, 10, 10, 30);
+  rect(0, 0, moving.pbarWidth, 50);
+}
+
+function drawGameBar() {
+  fill("white");
+  //bar
+  rect(30, 70, 50, height - 100);
+  //bar to follow
+  fill("lightblue");
+  rect(30, moving.sbarY, 50, (height - 100) / 7);
+}
+
+function drawGameIcon() {
+  fill("orange");
+  ellipse(55, moving.basketballY, 40);
+  if (keyIsPressed === true) {
+    moving.basketballY -= 10;
+  }
 }
