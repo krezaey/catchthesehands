@@ -12,10 +12,12 @@ let cwidth = 900,
     sbarHeight: (height - 100) / 7,
     basketballY: 260
   },
-    animation = {
-      basketballXPos: 10,
-      basketballYPos: 100
-    };
+  animation = {
+    basketballXPos: 10,
+    basketballYPos: 100
+  },
+  button = document.querySelector("button"),
+  start = false;
 
 function setup() {
   let canvas = createCanvas(cwidth, cheight);
@@ -26,10 +28,17 @@ function draw() {
   drawBasketballs();
   drawProgress();
   drawGameBar();
-  moveGameBar();
-  drawGameIcon();
-  moveGameIcon();
   drawHoop();
+  drawGameIcon();
+
+  button.addEventListener("click", function(event) {
+    start = true;
+  });
+
+  if (start === true) {
+    moveGameIcon();
+    moveGameBar();
+  }
 }
 
 function drawBackground() {
