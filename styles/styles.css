@@ -2,9 +2,10 @@ body {
   margin: 0 auto;
   width: 960px;
   padding: 50px;
-   display: grid;
-   background-color: black;
+  display: grid;
+  background-color: black;
 }
+
 .title2 {
   position: relative;
   color: white;
@@ -40,8 +41,6 @@ span:hover {
 
 p {
   font-family: "EB Garamond";
-  /* position: relative; */
-
 }
 
 .heading {
@@ -55,32 +54,15 @@ p {
   margin-top: -100px;
 }
 
-/* .lakers {
-  grid-row: 1;
-  position: relative;
+.rivals.heading {
+  margin-top: 100px;
   color: white;
-  max-width: 100%;
-  color: black;
-} */
-/* .lakers.pic, .celtics.bio {
-grid-column: 2 / span 1;
-position: relative;
+  font-size: 60px;
+  border-style: solid;
   color: white;
-  max-width: 100%;
-  min-width: auto;
-  color: black;
-} */
-
-
-/* .rivals.lakers.pic, .rivals.celtics.pic {
-  height: 300px;
-  width: 400px;
-  position: relative;
+  width: 2000px;
+  margin-left: -500px;
 }
-.celtics.pic {
-  position: relative;
-  margin-top: 65px;
-} */
 
 .rivals.lakers.header:hover {
   color: purple;
@@ -89,6 +71,9 @@ position: relative;
 .rivals.celtics.header:hover {
   color: green;
 }
+
+
+
 .lakplayers {
   border-style: solid;
   margin-left: 50px;
@@ -100,6 +85,7 @@ position: relative;
   font-size: 30px;
   opacity: 0.7;
  }
+
 .lakplayers:hover {
   opacity: 1;
 }
@@ -113,12 +99,13 @@ position: relative;
  border-color: white;
  background-color: green;
  font-size: 30px;
-  opacity: 0.7;
-
+ opacity: 0.7;
 }
+
 .celplayers:hover{
   opacity: 1;
 }
+
 .favmoments{
   color: white;
   margin-top: 100px;
@@ -127,8 +114,8 @@ position: relative;
   text-align: center;
   background-color: black;
   font-size: 40px;
-
 }
+
 .favorites {
   position: absolute;
   border-style: solid;
@@ -141,42 +128,35 @@ position: relative;
   background-size: 590px 700px, 580px 700px;
   background-position: left, right;
   margin-left: -300px;
-
 }
+
 #favs {
   text-align: center;
   color: white;
   font-family: impact;
   font-size: 150px;
-
 }
+
 #muteYouTubeVideoPlayer {
   width: 3000px;
   margin-top: 100px;
   margin-left: -900px;
 }
+
 .celtics.bio {
   color: white;
-}
-.celtics.bio {
   margin-top: 100px;
   font-size: 40px;
 }
- .lakers.bio {
+
+.lakers.bio {
    color: white;
    font-size: 40px;
    padding-bottom: 1350px;
 }
-.rivals.heading {
-  margin-top: 100px;
-  color: white;
-  font-size: 60px;
-  border-style: solid;
-  color: white;
-  width: 2000px;
-  margin-left: -500px;
 
-}
+
+
 #game {
   color: white;
   font-size: 30px;
