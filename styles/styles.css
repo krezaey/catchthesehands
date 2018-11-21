@@ -10,6 +10,7 @@ body {
   color: white;
   font-family: impact;
   height: 100px;
+  width: 960px;
   text-align: center;
   font-size: 30px;
   margin-left: -1000px;
@@ -23,11 +24,13 @@ body {
   font-size: 100px;
   margin-top: -1200px;
   border: solid;
+  width: 960px;
   height: 275px;
   background-color: white;
   margin-right: -80px;
-  margin-left: -1000px;
+  margin-left: 98px;
   text-align: center;
+  font-weight: bold;
 }
 
 span {
@@ -93,7 +96,7 @@ position: relative;
   border-style: solid;
   margin-left: 50px;
   margin-top: -65px;
-  width: 500px;
+  width: 400px;
   height: 300px;
   border-color: purple;
   background-color: orange;
@@ -105,10 +108,10 @@ position: relative;
 }
 
 .celplayers {
- margin-left: 1600px;
- margin-top: -330px;
+ margin-left: 500px;
+ margin-top: -320px;
  border-style: solid;
- width: 500px;
+ width: 400px;
  height: 300px;
  border-color: white;
  background-color: green;
@@ -133,14 +136,14 @@ position: relative;
   position: absolute;
   border-style: solid;
   color: white;
-  margin-top: 2600px;
+  margin-top: 3000px;
   background-repeat: no-repeat;;
-  width: 2200px;
+  width: 960px;
   height: 700px;
   background-image: url("http://media.liveauctiongroup.net/i/7982/9490760_1.jpg?v=8CCCA6572EFE7B0"), url("http://media.liveauctiongroup.net/i/5798/8674661_1.jpg?v=8CC51A3D5E76C70");
-  background-size: 590px 700px, 580px 700px;
+  background-size: 500px 700px, 580px 700px;
   background-position: left, right;
-  margin-left: -300px;
+  margin-left: 100px;
 
 }
 #favs {
@@ -151,9 +154,9 @@ position: relative;
 
 }
 #muteYouTubeVideoPlayer {
-  width: 3000px;
+  width: 960px;
   margin-top: 100px;
-  margin-left: -900px;
+  margin-left: 90px;
 }
 .celtics.bio {
   color: white;
@@ -173,8 +176,8 @@ position: relative;
   font-size: 60px;
   border-style: solid;
   color: white;
-  width: 2000px;
-  margin-left: -500px;
+  width: 960px;
+  margin-left: 100px;
 
 }
 #game {
