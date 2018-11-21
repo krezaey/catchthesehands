@@ -17,13 +17,15 @@ let cwidth = 900,
     basketballYPos: 100
   },
   button = document.querySelector("button"),
-  start = false;
+  start = false,
+  win;
 
 function setup() {
   let canvas = createCanvas(cwidth, cheight);
 }
 
 function draw() {
+
   drawBackground();
   drawBasketballs();
   drawProgress();
@@ -38,6 +40,8 @@ function draw() {
   if (start === true) {
     moveGameIcon();
     moveGameBar();
+    moveProgress();
+    WinLose();
   }
 }
 
@@ -68,17 +72,18 @@ function drawGameBar() {
 }
 
 function moveGameBar() {
-  let speed = random(-1, 1);
-  if (moving.sbarY < moving.gamebarUpperY) {
-    moving.sbarY = moving.gamebarUpperY - 50;
-  } else if (moving.sbarLowerY > moving.gamebarLowerY) {
-    moving.sbarY = moving.gamebarLowerY - 50;
-  }
+  let speed = random(-10, 10);
   if (speed < 0) {
-    moving.sbarY = moving.sbarY - 10;
-  } else if (speed > 0) {
-    moving.sbarY = moving.sbarY + 10;
+    if ((moving.sbarY - 10) < (moving.gamebarUpperY + 40)) {
+        speed = 1;
+        }
   }
+  else if (speed > 0) {
+    if ((moving.sbarY + moving.sbarHeight + 10) > moving.gamebarLowerY + 20) {
+      speed = -1;
+    }
+  }
+  moving.sbarY = moving.sbarY + (0.8 * speed);
 }
 
 function drawGameIcon() {
@@ -120,4 +125,29 @@ function drawBasketballs() {
   ellipse(animation.basketballXPos, animation.basketballYPos, 100);
   animation.basketballXPos = (animation.basketballXPos + 1) % cwidth;
   animation.basketballYPos = (animation.basketballYPos + 1) % cheight;
+}
+
+function moveProgress() {
+  if ((moving.basketballY - 35 <= moving.sbarY) && (moving.basketballY + 35 >= moving.sbarLowerY)) {
+    moving.pbarWidth += (44 * 0.025);
+  }
+  else {
+    moving.pbarWidth -= (44 * 0.025);
+  }
+}
+
+function WinLose() {
+  if (moving.pbarWidth >= width) {
+    win = true;
+  }
+  else if (moving.pbarWidth <= 0) {
+    win = false;
+  }
+
+  if (win === true) {
+    //alert("you win");
+  }
+  else if (win === false) {
+    //alert("you lose");
+  }
 }
