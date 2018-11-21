@@ -25,7 +25,6 @@ function setup() {
 }
 
 function draw() {
-
   drawBackground();
   drawBasketballs();
   drawProgress();
@@ -74,16 +73,16 @@ function drawGameBar() {
 function moveGameBar() {
   let speed = random(-10, 10);
   if (speed < 0) {
-    if ((moving.sbarY - 10) < (moving.gamebarUpperY + 40)) {
-        speed = 1;
-        }
+    if (moving.sbarY - 10 < moving.gamebarUpperY + 40) {
+      speed = 1;
+    }
   }
   else if (speed > 0) {
-    if ((moving.sbarY + moving.sbarHeight + 10) > moving.gamebarLowerY + 20) {
+    if (moving.sbarY + moving.sbarHeight + 10 > moving.gamebarLowerY + 20) {
       speed = -1;
     }
   }
-  moving.sbarY = moving.sbarY + (0.8 * speed);
+  moving.sbarY = moving.sbarY + 0.8 * speed;
 }
 
 function drawGameIcon() {
@@ -95,11 +94,14 @@ function drawGameIcon() {
 function moveGameIcon() {
   if (moving.basketballY < moving.gamebarUpperY + 65) {
     moving.basketballY += 1;
-  } else if (keyIsPressed === true) {
+  }
+  else if (keyIsPressed === true) {
     moving.basketballY -= 5;
-  } else if (moving.basketballY > moving.gamebarLowerY) {
+  }
+  else if (moving.basketballY > moving.gamebarLowerY) {
     moving.basketballY = moving.gamebarLowerY + 1;
-  } else {
+  }
+  else {
     moving.basketballY += 3;
   }
 }
@@ -128,11 +130,14 @@ function drawBasketballs() {
 }
 
 function moveProgress() {
-  if ((moving.basketballY - 35 <= moving.sbarY) && (moving.basketballY + 35 >= moving.sbarLowerY)) {
-    moving.pbarWidth += (44 * 0.025);
+  if (
+    moving.basketballY - 35 <= moving.sbarY &&
+    moving.basketballY + 35 >= moving.sbarLowerY
+  ) {
+    moving.pbarWidth += 44 * 0.025;
   }
   else {
-    moving.pbarWidth -= (44 * 0.025);
+    moving.pbarWidth -= 44 * 0.025;
   }
 }
 
@@ -145,9 +150,19 @@ function WinLose() {
   }
 
   if (win === true) {
-    //alert("you win");
+    setTimeout(function() {
+      alert("You won the game with a clutch free-throw! You should try out for the NBA.");
+    }, 500);
+    moving.pbarWidth = 440;
+    win = null;
+    return (start = false);
   }
   else if (win === false) {
-    //alert("you lose");
+    setTimeout(function() {
+      alert("You missed like a chump...");
+    }, 500);
+    moving.pbarWidth = 440;
+    win = null;
+    return (start = false);
   }
 }
