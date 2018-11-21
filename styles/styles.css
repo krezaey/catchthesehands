@@ -184,3 +184,13 @@ position: relative;
   color: white;
   font-size: 30px;
 }
+
+#game button {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  font-size: 56px;
+  font-family: "Impact";
+  display: inline-block;
+}
