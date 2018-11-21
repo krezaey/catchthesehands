@@ -154,6 +154,8 @@ function WinLose() {
       alert("You won the game with a clutch free-throw! You should try out for the NBA.");
     }, 500);
     moving.pbarWidth = 440;
+    moving.sbarY = 230;
+    moving.basketballY = 260;
     win = null;
     return (start = false);
   }
@@ -162,6 +164,8 @@ function WinLose() {
       alert("You missed like a chump...");
     }, 500);
     moving.pbarWidth = 440;
+    moving.sbarY = 230;
+    moving.basketballY = 260;
     win = null;
     return (start = false);
   }

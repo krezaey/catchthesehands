@@ -1,3 +1,4 @@
+
 body {
   margin: 0 auto;
   width: 960px;
@@ -68,31 +69,31 @@ p {
   background-color: orange;
   font-size: 30px;
   opacity: 0.7;
- }
- .lakers.bio {
-    color: white;
-    font-size: 40px;
-    padding-bottom: 1350px;
- }
+}
+.lakers.bio {
+  color: white;
+  font-size: 40px;
+  padding-bottom: 1350px;
+}
 
- .lakplayers:hover {
-   opacity: 1;
- }
+.lakplayers:hover {
+  opacity: 1;
+}
 
 .rivals.celtics.header:hover {
   color: green;
 }
 
 .celplayers {
- margin-left: 500px;
- margin-top: -320px;
- border-style: solid;
- width: 400px;
- height: 300px;
- border-color: white;
- background-color: green;
- font-size: 30px;
- opacity: 0.7;
+  margin-left: 500px;
+  margin-top: -320px;
+  border-style: solid;
+  width: 400px;
+  height: 300px;
+  border-color: white;
+  background-color: green;
+  font-size: 30px;
+  opacity: 0.7;
 }
 .celtics.bio {
   color: white;
@@ -100,11 +101,11 @@ p {
   font-size: 40px;
 }
 
-.celplayers:hover{
+.celplayers:hover {
   opacity: 1;
 }
 
-.favmoments{
+.favmoments {
   color: white;
   margin-top: 100px;
   margin-right: 50px;
@@ -119,14 +120,14 @@ p {
   border-style: solid;
   color: white;
   margin-top: 3000px;
-  background-repeat: no-repeat;;
+  background-repeat: no-repeat;
   width: 960px;
   height: 700px;
-  background-image: url("http://media.liveauctiongroup.net/i/7982/9490760_1.jpg?v=8CCCA6572EFE7B0"), url("http://media.liveauctiongroup.net/i/5798/8674661_1.jpg?v=8CC51A3D5E76C70");
+  background-image: url("http://media.liveauctiongroup.net/i/7982/9490760_1.jpg?v=8CCCA6572EFE7B0"),
+    url("http://media.liveauctiongroup.net/i/5798/8674661_1.jpg?v=8CC51A3D5E76C70");
   background-size: 500px 700px, 580px 700px;
   background-position: left, right;
   margin-left: 100px;
-
 }
 
 #favstitle {
